@@ -15,10 +15,10 @@ router.post('/', TaskValidation, TaskController.create);
 router.delete('/:id', TaskController.delete);
 router.put('/:id/:done', TaskController.done);
 
-router.get('/filter/late/:macaddress', MacaddressValidation, TaskController.late);
-router.get('/filter/today/:macaddress', MacaddressValidation, TaskController.today);
-router.get('/filter/week/:macaddress', MacaddressValidation, TaskController.week);
-router.get('/filter/month/:macaddress', MacaddressValidation, TaskController.month);
-router.get('/filter/year/:macaddress', MacaddressValidation, TaskController.year);
+router.get('/filter/late/:macaddress', TaskController.late);
+router.get('/filter/today/:macaddress', TaskController.today);
+router.get('/filter/week/:macaddress', TaskController.week);
+router.get('/filter/month/:macaddress', TaskController.month);
+router.get('/filter/year/:macaddress', TaskController.year);
 
 module.exports = router;
